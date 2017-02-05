@@ -1,0 +1,22 @@
+
+apply plugin: 'java'
+tasks.withType(JavaCompile) {
+	options.encoding = "UTF-8"
+}
+
+repositories {
+    jcenter()
+    maven { url "http://repo.spring.io/libs-snapshot" }
+}
+
+dependencies {
+		compile("org.springframework.boot:spring-boot-starter-web:1.4.3.RELEASE")
+		compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.40'
+		compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '1.4.3.RELEASE'
+		compile group: 'org.springframework.boot', name: 'spring-boot-starter-mail', version: '1.4.3.RELEASE'
+		compile group: 'com.alibaba', name: 'druid', version: '1.0.27'
+		compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '1.4.3.RELEASE'
+		
+		
+				
+}
